@@ -1,0 +1,15 @@
+{
+  "name": "app-launch-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static SEO site with free App Store launch tools for indie developers.",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "check": "python3 scripts/check_site.py",
+    "serve": "python3 scripts/build.py && python3 -m http.server 4173 -d dist"
+  },
+  "engines": {
+    "python": ">=3.9"
+  }
+}

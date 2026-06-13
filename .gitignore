@@ -1,0 +1,7 @@
+dist/
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+.idea/workspace.xml
