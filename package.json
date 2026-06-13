@@ -1,0 +1,26 @@
+{
+  "name": "all-website-tool-sites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent static SEO tool sites with browser-local calculators.",
+  "scripts": {
+    "build:date": "python3 sites/_shared/scripts/build_site.py sites/datecalctools",
+    "check:date": "python3 sites/_shared/scripts/check_site.py sites/datecalctools",
+    "serve:date": "python3 -m http.server 4173 -d sites/datecalctools/dist",
+    "build:unit": "python3 sites/_shared/scripts/build_site.py sites/unitconverthub",
+    "check:unit": "python3 sites/_shared/scripts/check_site.py sites/unitconverthub",
+    "serve:unit": "python3 -m http.server 4174 -d sites/unitconverthub/dist",
+    "build:math": "python3 sites/_shared/scripts/build_site.py sites/quickmathtools",
+    "check:math": "python3 sites/_shared/scripts/check_site.py sites/quickmathtools",
+    "build:money": "python3 sites/_shared/scripts/build_site.py sites/wagemoneycalc",
+    "check:money": "python3 sites/_shared/scripts/check_site.py sites/wagemoneycalc",
+    "build:health": "python3 sites/_shared/scripts/build_site.py sites/healthlifecalc",
+    "check:health": "python3 sites/_shared/scripts/check_site.py sites/healthlifecalc",
+    "build:all": "npm run build:date && npm run build:unit && npm run build:math && npm run build:money && npm run build:health",
+    "check:all": "npm run check:date && npm run check:unit && npm run check:math && npm run check:money && npm run check:health"
+  },
+  "engines": {
+    "python": ">=3.9"
+  }
+}
