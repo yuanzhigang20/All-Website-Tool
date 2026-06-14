@@ -55,6 +55,57 @@ FAQ = [
     ('Can I use these tools for commercial apps?', 'Yes, but you are responsible for validating metadata, legal text, pricing, and submission details for your app.'),
 ]
 
+TOOL_SEO = {
+    'app-store-title-generator': {
+        'intent': 'app name ideas, App Store title examples, iOS app name generator, ASO title generator',
+        'sections': [
+            ('How to write an App Store title that users understand', 'Start with the words a real user would use to describe the app. A good App Store title usually combines a memorable brand name with a plain-language category or benefit, such as a planner, scanner, tracker, editor, timer, budget tool, or habit app. The title should make sense in search results before a user reads the subtitle or screenshots.'),
+            ('App name ideas vs ASO keywords', 'Keywords can help clarify what the app does, but the title still needs to sound trustworthy. Avoid stuffing several search terms into one name. If the brand is already strong, keep the title clean and use the subtitle, keyword field, and description to explain the use case. If the brand is new, one relevant category phrase can make the listing easier to understand.'),
+            ('Title checklist before App Store submission', 'Check that the name is easy to pronounce, does not imply a feature the app lacks, avoids protected trademarks, and still reads clearly on small screens. Review competing search results, but do not copy competitor names or positioning. Keep several backup ideas because availability, legal review, or product positioning may change before launch.'),
+            ('Examples of useful title patterns', 'Common patterns include Brand + Category, Brand + Main Benefit, Category + Audience, and Short Brand + Keyword. For example, a focus timer might test names around focus, Pomodoro, study, timer, sessions, and deep work, then choose the version that best matches the actual product experience.')
+        ],
+        'faq': [
+            ('What is an App Store title generator?', 'It is a brainstorming tool that creates app name ideas from your category, audience, feature, benefit, brand, and keyword inputs.'),
+            ('Should my app title include a keyword?', 'Use a keyword only when it improves clarity and accurately describes the app. A readable title is usually better than a stuffed title.'),
+            ('How do I choose between several app name ideas?', 'Shortlist names that are clear, memorable, available, and aligned with the app’s main value. Then review them with the subtitle and screenshots as a complete listing.'),
+            ('Can this tool check trademark availability?', 'No. You should perform your own legal and marketplace checks before publishing a final name.'),
+            ('Does changing my app title improve rankings?', 'A clearer title can help relevance and conversion, but no generator can guarantee ranking or downloads.')
+        ]
+    },
+    'app-store-subtitle-generator': {
+        'intent': 'App Store subtitle examples, iOS subtitle generator, app subtitle ideas, ASO subtitle writing',
+        'sections': [
+            ('What an App Store subtitle should do', 'The subtitle should explain the app’s core value in one compact phrase. It can name the user, the task, the benefit, or the main feature. The best subtitles are specific enough to help a user decide whether the app matches their need, but short enough to stay readable in search and product pages.'),
+            ('Subtitle examples by intent', 'A productivity app might emphasize planning, focus, notes, or reminders. A fitness app might highlight workouts, tracking, coaching, or habits. A finance app might mention budgets, bills, expenses, or savings. Use words that describe the real product rather than generic claims such as best, ultimate, or number one.'),
+            ('How to use keywords naturally', 'Choose one primary phrase that belongs in the subtitle and write around user benefit. If the phrase sounds awkward, move it to the keyword field or description. The subtitle should support conversion as well as discovery, so clarity matters more than maximum keyword density.'),
+            ('Before you save the subtitle', 'Read the title and subtitle together. Remove repeated words unless repetition is intentional. Check character limits in App Store Connect, verify localization needs, and make sure the phrase still matches the screenshots, onboarding, and feature set users will actually see.')
+        ],
+        'faq': [
+            ('What is an App Store subtitle generator?', 'It creates short subtitle ideas from your app type, benefit, feature, audience, keyword, tone, and words to avoid.'),
+            ('How long should an App Store subtitle be?', 'Use the current limit shown in App Store Connect. Many teams draft around 30 characters, then verify before release.'),
+            ('Can I repeat words from the app title?', 'Avoid unnecessary repetition. Use the subtitle to add a new benefit, audience, or feature clue.'),
+            ('Should I localize subtitles?', 'Yes, important markets should get localized subtitles based on local search intent rather than direct translation only.'),
+            ('Can a better subtitle increase downloads?', 'A clearer subtitle can improve understanding and conversion, but downloads depend on many listing and product factors.')
+        ]
+    },
+    'app-store-listing-checker': {
+        'intent': 'App Store submission checklist, app listing checker, iOS metadata checklist, App Store launch QA',
+        'sections': [
+            ('What to check before submitting an App Store listing', 'A strong listing connects metadata, screenshots, links, review notes, and app behavior. Before submission, verify that the title, subtitle, keywords, description, promotional text, privacy policy URL, support URL, screenshots, and review instructions all describe the same product accurately.'),
+            ('High-risk gaps that delay review', 'Common avoidable issues include broken privacy links, missing test accounts, unclear subscription instructions, screenshots that do not match the app, vague review notes, keyword stuffing, unsupported claims, and metadata that references unavailable features. Fix these before sending the build to review.'),
+            ('How to use the readiness score', 'The score is a prioritization aid, not a guarantee. Treat critical issues as blockers, recommendations as pre-launch improvements, and nice-to-have notes as polish. Re-run the check after every meaningful metadata change or major app update.'),
+            ('Build a repeatable launch QA workflow', 'Save a copy of your checklist for each release. Review links on mobile, test credentials in a clean environment, confirm screenshots by device family, and keep a short change log of metadata decisions so future updates are faster and safer.')
+        ],
+        'faq': [
+            ('What is an App Store listing checker?', 'It is a pre-submission checklist that reviews metadata, links, screenshots, privacy policy, review notes, and login-test readiness.'),
+            ('Does this checker guarantee App Review approval?', 'No. It helps catch common preparation gaps, but Apple controls review requirements and decisions.'),
+            ('What should I fix first?', 'Fix broken links, missing privacy policy URLs, missing test accounts for login apps, inaccurate screenshots, and misleading metadata first.'),
+            ('Should I use it for updates or only first launches?', 'Use it for first launches, major updates, pricing changes, localization launches, and any release that changes metadata or review instructions.'),
+            ('Can this replace App Store Connect validation?', 'No. Use it before submission, then verify everything again inside App Store Connect.')
+        ]
+    }
+}
+
 TOOL_BY_SLUG = {slug: name for _, slug, name, *_ in TOOLS}
 ROUTES = []
 
@@ -87,12 +138,34 @@ def breadcrumb(items):
     return html, schema
 
 
-def faq_html():
-    return '<section class="faq"><h2>FAQ</h2>' + ''.join(f'<details><summary>{escape(q)}</summary><p>{escape(a)}</p></details>' for q,a in FAQ) + '</section>'
+def faq_schema(items=None):
+    items = items or FAQ
+    return {'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in items]}
 
 
-def faq_schema():
-    return {'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in FAQ]}
+def faq_html(items=None):
+    items = items or FAQ
+    return '<section class="faq"><h2>FAQ</h2>' + ''.join(f'<details><summary>{escape(q)}</summary><p>{escape(a)}</p></details>' for q,a in items) + '</section>'
+
+
+def seo_sections(slug, name):
+    custom = TOOL_SEO.get(slug)
+    if custom:
+        intent = f'<section class="search-intent"><h2>Search intent covered</h2><p>This page targets practical queries around {escape(custom["intent"])}. The tool is designed for developers who need a fast draft or preflight check before working in App Store Connect.</p></section>'
+        body = ''.join(f'<section><h2>{escape(heading)}</h2><p>{escape(copy)}</p></section>' for heading, copy in custom['sections'])
+        return intent + body
+    return ''.join(f'<section><h2>{heading}</h2><p>{escape(name)} helps independent developers prepare a stronger App Store submission. Use the tool output as a practical draft, then verify final limits, dimensions, and policy details in App Store Connect before publishing.</p></section>' for heading in ['How it works','Best practices','Common mistakes','Before you submit'])
+
+
+def related_links(slug):
+    related = {
+        'app-store-title-generator': [('Subtitle Generator','/tools/app-store-subtitle-generator/'),('ASO Keyword Generator','/tools/aso-keyword-generator/'),('Keyword Counter','/tools/app-store-keyword-counter/')],
+        'app-store-subtitle-generator': [('Title Generator','/tools/app-store-title-generator/'),('Subtitle Guide','/guides/how-to-write-app-store-subtitle/'),('ASO Keyword Generator','/tools/aso-keyword-generator/')],
+        'app-store-listing-checker': [('Submission Checklist Template','/templates/app-store-submission-checklist/'),('Privacy Policy Generator','/tools/privacy-policy-generator/'),('Review Notes Generator','/tools/app-review-notes-generator/')]
+    }.get(slug, [])
+    if not related:
+        return ''
+    return '<section><h2>Related App Store launch resources</h2><div class="related">' + ''.join(f'<a href="{href}">{escape(label)}</a>' for label, href in related) + '</div></section>'
 
 
 def tool_form(tool_id):
@@ -132,7 +205,8 @@ def write_route(path, html):
 
 def render_home():
     tool_cards = ''.join(card(slug, name, desc, 'tools') for _, slug, name, _, desc, _ in TOOLS[:6])
-    body = f'<main><section class="hero"><div class="container hero-grid"><div><p class="eyebrow">Free App Store tools</p><h1>Free App Store Tools for Indie Developers</h1><p class="lede">Prepare screenshots, metadata, keywords, release notes, privacy links, and launch checklists before submitting your app.</p><div class="cta-row"><a class="button" href="/tools/">Browse Tools</a><a class="button secondary" href="/guides/">Read SEO Guides</a></div></div><div class="hero-card"><h2>Launch-ready checks</h2><ul><li>Browser-local image and text tools</li><li>SEO-friendly guides and templates</li><li>No backend required</li><li>Independent from Apple Inc.</li></ul></div></div></section><section class="section"><div class="container"><h2>Popular Tools</h2><div class="grid">{tool_cards}</div></div></section><section class="section"><div class="container"><div class="warning">{escape(DISCLAIMER)}</div></div></section></main>'
+    workflow = '<section class="section"><div class="container"><div class="content"><h2>App Store launch workflow</h2><p>Start with a clear app title, write a subtitle that explains the core value, then run a final listing check before submission. This workflow helps indie developers cover ASO metadata, App Store review notes, screenshots, privacy links, and launch QA without creating an account.</p><div class="related"><a href="/tools/app-store-title-generator/">Generate title ideas</a><a href="/tools/app-store-subtitle-generator/">Write subtitle options</a><a href="/tools/app-store-listing-checker/">Check the listing</a><a href="/templates/app-store-submission-checklist/">Copy the submission checklist</a></div></div></div></section>'
+    body = f'<main><section class="hero"><div class="container hero-grid"><div><p class="eyebrow">Free App Store tools</p><h1>Free App Store Tools for Indie Developers</h1><p class="lede">Prepare screenshots, metadata, keywords, release notes, privacy links, and launch checklists before submitting your app.</p><div class="cta-row"><a class="button" href="/tools/">Browse Tools</a><a class="button secondary" href="/guides/">Read SEO Guides</a></div></div><div class="hero-card"><h2>Launch-ready checks</h2><ul><li>Browser-local image and text tools</li><li>SEO-friendly guides and templates</li><li>No backend required</li><li>Independent from Apple Inc.</li></ul></div></div></section><section class="section"><div class="container"><h2>Popular Tools</h2><div class="grid">{tool_cards}</div></div></section>{workflow}<section class="section"><div class="container"><div class="warning">{escape(DISCLAIMER)}</div></div></section></main>'
     write_route('/', layout('/', 'Free App Store Tools for Indie Developers | App Launch Toolkit', 'Free tools for App Store screenshots, ASO keywords, subtitles, release notes, privacy policies, review notes, and iOS app launch checklists.', body))
 
 
@@ -140,10 +214,11 @@ def render_tool(tool):
     tool_id, slug, name, title, desc, category = tool
     path = f'/tools/{slug}/'
     bc, bc_schema = breadcrumb([('Home','/'),('Tools','/tools/'),(name,path)])
-    sections = ''.join(f'<section><h2>{heading}</h2><p>{escape(name)} helps independent developers prepare a stronger App Store submission. Use the tool output as a practical draft, then verify final limits, dimensions, and policy details in App Store Connect before publishing.</p></section>' for heading in ['How it works','Best practices','Common mistakes','Before you submit'])
-    body = f'<main class="page-main"><div class="container">{bc}<p class="eyebrow">{escape(category)}</p><h1>{escape(name)}</h1><p class="lede">{escape(desc)}</p><div class="tool-layout"><section class="tool-card" data-tool="{tool_id}"><h2>Free {escape(name)}</h2><p class="small">This tool runs in your browser and does not require a backend account.</p>{tool_form(tool_id)}</section><aside class="result-card"><h2>Results</h2><div id="result" class="output"><p class="small">Enter details and run the tool to see results here.</p></div></aside></div><article class="content">{sections}<section><h2>Disclaimer</h2><p>{escape(DISCLAIMER)}</p><p>Apple may update requirements. Always confirm final submission details in App Store Connect before publishing.</p></section>{faq_html()}</article></div></main>'
+    sections = seo_sections(slug, name)
+    faqs = TOOL_SEO.get(slug, {}).get('faq', FAQ)
+    body = f'<main class="page-main"><div class="container">{bc}<p class="eyebrow">{escape(category)}</p><h1>{escape(name)}</h1><p class="lede">{escape(desc)}</p><div class="tool-layout"><section class="tool-card" data-tool="{tool_id}"><h2>Free {escape(name)}</h2><p class="small">This tool runs in your browser and does not require a backend account.</p>{tool_form(tool_id)}</section><aside class="result-card"><h2>Results</h2><div id="result" class="output"><p class="small">Enter details and run the tool to see results here.</p></div></aside></div><article class="content">{sections}{related_links(slug)}<section><h2>Disclaimer</h2><p>{escape(DISCLAIMER)}</p><p>Apple may update requirements. Always confirm final submission details in App Store Connect before publishing.</p></section>{faq_html(faqs)}</article></div></main>'
     app_schema = {'@context':'https://schema.org','@type':'WebApplication','name':name,'applicationCategory':'DeveloperApplication','operatingSystem':'Any','url':abs_url(path),'offers':{'@type':'Offer','price':'0','priceCurrency':'USD'}}
-    write_route(path, layout(path, title, desc, body, [bc_schema, app_schema, faq_schema()]))
+    write_route(path, layout(path, title, desc, body, [bc_schema, app_schema, faq_schema(faqs)]))
 
 
 def render_index(prefix, title, desc, items):

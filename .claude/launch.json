@@ -6,6 +6,30 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "4173", "-d", "sites/datecalctools/dist"],
       "port": 4173
+    },
+    {
+      "name": "unitconverthub",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4174", "-d", "sites/unitconverthub/dist"],
+      "port": 4174
+    },
+    {
+      "name": "quickmathtools",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4175", "-d", "sites/quickmathtools/dist"],
+      "port": 4175
+    },
+    {
+      "name": "wagemoneycalc",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4176", "-d", "sites/wagemoneycalc/dist"],
+      "port": 4176
+    },
+    {
+      "name": "healthlifecalc",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4177", "-d", "sites/healthlifecalc/dist"],
+      "port": 4177
     }
   ]
 }
