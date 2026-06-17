@@ -18,197 +18,104 @@
   <meta name="twitter:image" content="https://freetoolsspace.com/assets/brand/freetoolsspace-logo.svg">
   <meta name="twitter:title" content="FreeToolsSpace | Free Online Calculators and Browser Tools">
   <meta name="twitter:description" content="FreeToolsSpace collects free browser-based calculators and tools for dates, unit conversion, math, wages, money, health, lifestyle planning, text editing, developer utilities, image tools, PDF tools, and SEO.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"FreeToolsSpace","url":"https://freetoolsspace.com/","description":"FreeToolsSpace is a free directory of browser-based calculators for dates, unit conversions, math, money, wages, health, and lifestyle planning.","potentialAction":{"@type":"SearchAction","target":"https://freetoolsspace.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Organization","name":"FreeToolsSpace","url":"https://freetoolsspace.com/","logo":"https://freetoolsspace.com/assets/brand/freetoolsspace-mark.svg"},{"@type":"ItemList","name":"FreeToolsSpace calculator categories","itemListElement":[{"@type":"ListItem","position":1,"name":"DateCalcTools","url":"https://freetoolsspace.com/datecalctools/"},{"@type":"ListItem","position":2,"name":"UnitConvertHub","url":"https://freetoolsspace.com/unitconverthub/"},{"@type":"ListItem","position":3,"name":"QuickMathTools","url":"https://freetoolsspace.com/quickmathtools/"},{"@type":"ListItem","position":4,"name":"WageMoneyCalc","url":"https://freetoolsspace.com/wagemoneycalc/"},{"@type":"ListItem","position":5,"name":"HealthLifeCalc","url":"https://freetoolsspace.com/healthlifecalc/"},{"@type":"ListItem","position":6,"name":"TextTools","url":"https://freetoolsspace.com/texttools/"},{"@type":"ListItem","position":7,"name":"DevToolBox","url":"https://freetoolsspace.com/devtoolbox/"},{"@type":"ListItem","position":8,"name":"ImageToolBox","url":"https://freetoolsspace.com/imagetoolbox/"},{"@type":"ListItem","position":9,"name":"PDFToolBox","url":"https://freetoolsspace.com/pdftoolbox/"},{"@type":"ListItem","position":10,"name":"SEOToolBox","url":"https://freetoolsspace.com/seotoolbox/"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"FreeToolsSpace","url":"https://freetoolsspace.com/","description":"FreeToolsSpace is a free directory of browser-based calculators and online tools for math, dates, text, developer tasks, images, PDFs, and SEO.","potentialAction":{"@type":"SearchAction","target":"https://freetoolsspace.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Organization","name":"FreeToolsSpace","url":"https://freetoolsspace.com/","logo":"https://freetoolsspace.com/assets/brand/freetoolsspace-logo.svg"}]}</script>
   <style>
-    :root { color-scheme: light; --ink:#17201b; --muted:#65736b; --paper:#fbfaf4; --panel:#ffffff; --line:#e6e0d2; --green:#0f6b4d; --gold:#d7a72f; --shadow:0 24px 80px rgba(23,32,27,.13); }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; color:var(--ink); background: radial-gradient(circle at 16% 8%, #fff4c8 0, transparent 28rem), radial-gradient(circle at 88% 0, #dff6ec 0, transparent 30rem), linear-gradient(180deg, #fbfaf4 0%, #f4efe2 100%); }
-    a { color: inherit; }
-    .topbar { position:sticky; top:0; z-index:5; backdrop-filter: blur(18px); background: rgba(251,250,244,.78); border-bottom:1px solid rgba(230,224,210,.8); }
-    .nav { max-width:1180px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:900; letter-spacing:-.04em; font-size:1.28rem; }
-    .brand-logo { width:210px; max-width:52vw; height:auto; display:block; filter: drop-shadow(0 8px 14px rgba(23,32,27,.12)); }
-    .brand:hover .brand-logo { transform: translateY(-1px); }
-    .links { display:flex; flex-wrap:wrap; gap:14px 18px; color:var(--muted); font:700 .88rem ui-sans-serif, system-ui, sans-serif; }
-    .links a { text-decoration:none; }
-    .links a:hover { color:var(--green); }
-    main { overflow:hidden; }
-    .hero { max-width:1180px; margin:0 auto; padding:86px 24px 50px; display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:end; }
-    .eyebrow { display:inline-flex; align-items:center; gap:8px; margin:0 0 18px; padding:8px 12px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.72); color:var(--green); font:800 .78rem ui-sans-serif, system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; }
-    h1 { margin:0; font-size:clamp(3rem, 8vw, 7.7rem); line-height:.86; letter-spacing:-.075em; max-width:920px; }
-    .lede { max-width:720px; margin:28px 0 0; color:#3f4d44; font-size:clamp(1.12rem, 2vw, 1.45rem); line-height:1.55; }
-    .hero-panel { background:var(--panel); border:1px solid var(--line); border-radius:34px; padding:30px; box-shadow:var(--shadow); transform: rotate(-1.5deg); }
-    .hero-panel h2 { margin:0 0 16px; font-size:2rem; letter-spacing:-.04em; }
-    .hero-panel p { margin:0 0 18px; color:var(--muted); line-height:1.65; }
-    .pill-grid { display:flex; flex-wrap:wrap; gap:10px; }
-    .pill-grid a { text-decoration:none; padding:10px 12px; border-radius:999px; border:1px solid var(--line); background:#f8f5ec; font:800 .84rem ui-sans-serif, system-ui, sans-serif; }
-    .section { max-width:1180px; margin:0 auto; padding:30px 24px 88px; }
-    .section-head { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:26px; }
-    .section h2.title { margin:0; font-size:clamp(2rem, 4vw, 4.2rem); line-height:.95; letter-spacing:-.06em; }
-    .section-head p { max-width:420px; color:var(--muted); line-height:1.6; font-family:ui-sans-serif, system-ui, sans-serif; }
-    .grid { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:16px; }
-    .tool-card { min-height:430px; position:relative; display:flex; flex-direction:column; padding:24px; border:1px solid color-mix(in srgb, var(--accent), #111 18%); border-radius:30px; background:linear-gradient(180deg, color-mix(in srgb, var(--accent), white 88%), #fff 42%); box-shadow:0 16px 50px rgba(23,32,27,.10); transition: transform .2s ease, box-shadow .2s ease; }
-    .tool-card:hover { transform: translateY(-8px); box-shadow:0 28px 70px rgba(23,32,27,.16); }
-    .card-index { font:900 .85rem ui-sans-serif, system-ui, sans-serif; color:var(--accent); }
-    .card-kicker { margin:36px 0 10px; color:var(--accent); font:900 .76rem ui-sans-serif, system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; }
-    .tool-card h2 { margin:0; font-size:2rem; line-height:.98; letter-spacing:-.05em; }
-    .tool-card h2 a { text-decoration:none; }
-    .tool-card p { color:#506055; line-height:1.55; }
-    .tool-card ul { margin:8px 0 24px; padding-left:18px; color:#33423a; line-height:1.75; font-family:ui-sans-serif, system-ui, sans-serif; font-size:.93rem; }
-    .open-link { margin-top:auto; display:inline-flex; justify-content:center; text-decoration:none; padding:13px 14px; border-radius:16px; background:var(--ink); color:white; font:900 .9rem ui-sans-serif, system-ui, sans-serif; }
-    .crawl { border-top:1px solid var(--line); padding:42px 0 0; margin-top:34px; color:#3f4d44; font-family:ui-sans-serif, system-ui, sans-serif; }
-    .crawl ul { columns:2; line-height:2; }
-    footer { border-top:1px solid var(--line); background:#17201b; color:#f7f2e6; }
-    .footer-inner { max-width:1180px; margin:0 auto; padding:34px 24px; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
-    footer a { color:#ffdf67; }
-    @media (max-width: 980px) { .hero { grid-template-columns:1fr; padding-top:56px; } .grid { grid-template-columns:1fr 1fr; } .section-head { display:block; } }
-    @media (max-width: 640px) { .nav { align-items:flex-start; flex-direction:column; } .grid { grid-template-columns:1fr; } .tool-card { min-height:auto; } .crawl ul { columns:1; } }
+    :root{color-scheme:light;--bg:#f6f8fb;--surface:#ffffff;--surface2:#f0f5ff;--ink:#0f172a;--muted:#5b6678;--line:#dbe3ef;--brand:#2563eb;--brand2:#7c3aed;--good:#059669;--warn:#f59e0b;--shadow:0 22px 60px rgba(15,23,42,.10);--radius:24px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0,#dbeafe 0,transparent 32rem),radial-gradient(circle at 88% 8%,#ede9fe 0,transparent 30rem),linear-gradient(180deg,#fbfdff 0,#eef3f9 100%)}
+    a{color:inherit}.skip-link{position:absolute;left:-999px;top:10px;background:#fff;padding:10px 14px;border-radius:12px;z-index:20}.skip-link:focus{left:10px}.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(219,227,239,.85)}
+    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;text-decoration:none}.brand-logo{width:205px;max-width:48vw;height:auto;display:block}.links{display:flex;flex-wrap:wrap;gap:8px}.links a{text-decoration:none;color:#334155;font-weight:750;font-size:.88rem;padding:9px 11px;border-radius:999px}.links a:hover{background:#eef2ff;color:#1d4ed8}
+    main{overflow:hidden}.hero{max-width:1200px;margin:auto;padding:64px 20px 36px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:34px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:8px 12px;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-weight:850;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6.2vw,6.4rem);line-height:.92;letter-spacing:-.065em;margin:0;max-width:880px}.lede{font-size:clamp(1.05rem,1.8vw,1.32rem);line-height:1.65;color:#40516a;max-width:760px;margin:22px 0 0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 18px;border-radius:16px;text-decoration:none;font-weight:850}.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:white;box-shadow:0 14px 28px rgba(37,99,235,.22)}.btn.ghost{background:#fff;border:1px solid var(--line);color:#1e293b}.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px;max-width:660px}.trust-row div{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:18px;padding:14px}.trust-row strong{display:block;font-size:1.35rem}.trust-row span{color:var(--muted);font-size:.9rem}
+    .finder{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:32px;padding:24px;box-shadow:var(--shadow)}.finder h2{margin:0 0 8px;font-size:1.55rem}.finder p{margin:0 0 18px;color:var(--muted);line-height:1.55}.search-box{position:relative}.search-box input{width:100%;border:1px solid #cbd5e1;border-radius:18px;padding:15px 16px 15px 44px;font:inherit;background:#fff;outline:none}.search-box input:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}.search-box span{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#64748b}.quick-pills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.quick-pills a{text-decoration:none;background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:9px 11px;color:#334155;font-size:.9rem;font-weight:750}.result-list{display:grid;gap:8px;max-height:338px;overflow:auto;padding-right:4px}.result-list a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;padding:12px 13px;border-radius:16px;border:1px solid transparent}.result-list a:hover{background:#f8fafc;border-color:var(--line)}.result-list small{color:var(--muted)}.empty{display:none;color:#64748b;padding:10px}
+    .section{max-width:1200px;margin:auto;padding:40px 20px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}.section h2.title{font-size:clamp(1.9rem,3.6vw,3.6rem);line-height:1;margin:0;letter-spacing:-.045em}.section-head p{max-width:560px;color:var(--muted);line-height:1.6;margin:0}.category-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.category-card{--accent:#2563eb;display:flex;flex-direction:column;gap:14px;min-height:260px;padding:20px;border-radius:24px;text-decoration:none;background:linear-gradient(180deg,color-mix(in srgb,var(--accent),white 88%),#fff 48%);border:1px solid color-mix(in srgb,var(--accent),#dbe3ef 64%);box-shadow:0 12px 30px rgba(15,23,42,.06);transition:.18s ease}.category-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(15,23,42,.12)}.cat-top{display:flex;justify-content:space-between;align-items:center}.icon{width:44px;height:44px;display:grid;place-items:center;border-radius:16px;background:#fff;font-size:1.35rem;box-shadow:0 8px 20px rgba(15,23,42,.08)}.count{font-size:.78rem;font-weight:850;color:var(--accent);background:#fff;border-radius:999px;padding:6px 9px}.category-card h3{font-size:1.35rem;line-height:1.05;margin:0}.category-card p{margin:0;color:#475569;line-height:1.5;font-size:.94rem}.mini-links{margin-top:auto;display:flex;flex-wrap:wrap;gap:7px}.mini-links span{font-size:.78rem;background:rgba(255,255,255,.82);border:1px solid rgba(219,227,239,.9);padding:6px 8px;border-radius:999px;color:#334155}
+    .featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.tool-link{display:flex;gap:14px;align-items:flex-start;text-decoration:none;padding:17px;border:1px solid var(--line);background:#fff;border-radius:22px;box-shadow:0 10px 26px rgba(15,23,42,.055)}.tool-link:hover{border-color:#93c5fd;transform:translateY(-2px)}.tool-link b{display:block;margin-bottom:5px}.tool-link p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.45}.badge{flex:0 0 auto;width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:#eff6ff;color:#1d4ed8;font-weight:900}.hub-panel{display:grid;grid-template-columns:1fr 1fr;gap:16px}.info-card,.ad-card{border:1px solid var(--line);background:#fff;border-radius:24px;padding:24px;box-shadow:0 10px 26px rgba(15,23,42,.05)}.info-card h3,.ad-card h3{margin:0 0 10px;font-size:1.35rem}.info-card p,.ad-card p{color:var(--muted);line-height:1.65;margin:0 0 12px}.crawl-links{columns:2;line-height:2;margin:12px 0 0;padding-left:20px}.crawl-links a{color:#1d4ed8}.ad-placeholder{min-height:120px;border:1px dashed #cbd5e1;border-radius:18px;display:grid;place-items:center;color:#64748b;background:#f8fafc;text-align:center;padding:18px;margin-top:16px}
+    footer{margin-top:44px;background:#0f172a;color:#e2e8f0}.footer-inner{max-width:1200px;margin:auto;padding:34px 20px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-inner strong{display:block;font-size:1.1rem}.footer-inner span{color:#94a3b8}.footer-inner nav{display:flex;gap:14px;flex-wrap:wrap}.footer-inner a{color:#bfdbfe}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:1040px){.hero{grid-template-columns:1fr}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-panel{grid-template-columns:1fr}.trust-row{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:680px){.nav{align-items:flex-start;flex-direction:column}.links{max-height:92px;overflow:auto}.hero{padding-top:42px}.hero h1{font-size:clamp(2.35rem,13vw,4rem)}.trust-row,.category-grid,.featured-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.crawl-links{columns:1}.finder{padding:18px}.brand-logo{max-width:76vw}.category-card{min-height:0}.hero-actions .btn{width:100%}}
   </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to tools</a>
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="/" aria-label="FreeToolsSpace home"><img class="brand-logo" src="/assets/brand/freetoolsspace-logo.svg" alt="FreeToolsSpace"></a>
-      <div class="links"><a href="/datecalctools/">DateCalcTools</a><a href="/unitconverthub/">UnitConvertHub</a><a href="/quickmathtools/">QuickMathTools</a><a href="/wagemoneycalc/">WageMoneyCalc</a><a href="/healthlifecalc/">HealthLifeCalc</a><a href="/texttools/">TextTools</a><a href="/devtoolbox/">DevToolBox</a><a href="/imagetoolbox/">ImageToolBox</a><a href="/pdftoolbox/">PDFToolBox</a><a href="/seotoolbox/">SEOToolBox</a></div>
+      <div class="links"><a href="#categories">Categories</a><a href="#popular-tools">Popular tools</a><a href="/pdftoolbox/">PDF</a><a href="/imagetoolbox/">Images</a><a href="/devtoolbox/">Developer</a><a href="/seotoolbox/">SEO</a></div>
     </nav>
   </header>
-  <main>
-    <section class="hero">
+  <main id="main-content">
+    <section class="hero" aria-labelledby="home-title">
       <div>
-        <p class="eyebrow">Ten independent browser tool sites</p>
-        <h1>Free tools, organized in one clean space.</h1>
-        <p class="lede">Open focused, static, browser-based calculators for dates, unit conversions, math, wages, money, health, lifestyle planning, text editing, developer utilities, image tools, PDF tools, and SEO tasks. No account, database, or backend is required.</p>
+        <p class="eyebrow">Free online tools directory</p>
+        <h1 id="home-title">Fast browser tools for everyday work.</h1>
+        <p class="lede">FreeToolsSpace organizes calculators, converters, text utilities, developer tools, image tools, PDF tools, and SEO helpers into one clean, mobile-friendly hub. No sign-up, no heavy app shell, just focused static tools that are easy to find and use.</p>
+        <div class="hero-actions"><a class="btn primary" href="#popular-tools">Explore popular tools</a><a class="btn ghost" href="#categories">Browse categories</a></div>
+        <div class="trust-row" aria-label="Site highlights"><div><strong>170+</strong><span>indexable URLs in sitemap</span></div><div><strong>10</strong><span>main tool categories</span></div><div><strong>0</strong><span>login required</span></div></div>
       </div>
-      <aside class="hero-panel" aria-label="Tool categories">
-        <h2>Browse by site</h2>
-        <p>Each tool collection keeps its own pages, CSS, JavaScript, and assets inside a dedicated subdirectory.</p>
-        <div class="pill-grid"><a href="/datecalctools/">DateCalcTools</a><a href="/unitconverthub/">UnitConvertHub</a><a href="/quickmathtools/">QuickMathTools</a><a href="/wagemoneycalc/">WageMoneyCalc</a><a href="/healthlifecalc/">HealthLifeCalc</a><a href="/texttools/">TextTools</a><a href="/devtoolbox/">DevToolBox</a><a href="/imagetoolbox/">ImageToolBox</a><a href="/pdftoolbox/">PDFToolBox</a><a href="/seotoolbox/">SEOToolBox</a></div>
+      <aside class="finder" aria-labelledby="finder-title">
+        <h2 id="finder-title">Find a tool quickly</h2>
+        <p>Search by task, category, or file type. Results are regular crawlable links, so users and search engines can reach the same pages.</p>
+        <label class="visually-hidden" for="tool-search">Search tools</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="tool-search" type="search" placeholder="Try: PDF, percentage, JSON, image, text…" autocomplete="off"></div>
+        <div class="quick-pills" aria-label="Quick filters"><a href="/pdftoolbox/">PDF tools</a><a href="/imagetoolbox/">Image tools</a><a href="/quickmathtools/">Calculators</a><a href="/texttools/">Text tools</a></div>
+        <div class="result-list" id="search-results"><a class="category-card" href="/datecalctools/" style="--accent:#1769e0" data-title="datecalctools date & time age date diff business days" data-category="Date & Time"><div class="cat-top"><span class="icon" aria-hidden="true">📅</span><span class="count">01</span></div><h3>DateCalcTools</h3><p>Age, date difference, weekday, countdown, business day, and duration calculators.</p><div class="mini-links"><span>Age</span><span>Date diff</span><span>Business days</span></div></a>
+<a class="category-card" href="/unitconverthub/" style="--accent:#e56b1f" data-title="unitconverthub unit conversion cm to inches kg to lbs temp" data-category="Unit Conversion"><div class="cat-top"><span class="icon" aria-hidden="true">📏</span><span class="count">02</span></div><h3>UnitConvertHub</h3><p>Length, weight, temperature, volume, area, and distance converters with formulas.</p><div class="mini-links"><span>CM to inches</span><span>KG to LBS</span><span>Temp</span></div></a>
+<a class="category-card" href="/quickmathtools/" style="--accent:#6d28d9" data-title="quickmathtools math percent fraction gpa" data-category="Math"><div class="cat-top"><span class="icon" aria-hidden="true">％</span><span class="count">03</span></div><h3>QuickMathTools</h3><p>Percentage, fraction, average, ratio, random number, grade, and GPA calculators.</p><div class="mini-links"><span>Percent</span><span>Fraction</span><span>GPA</span></div></a>
+<a class="category-card" href="/wagemoneycalc/" style="--accent:#047857" data-title="wagemoneycalc money & wage salary discount tip" data-category="Money & Wage"><div class="cat-top"><span class="icon" aria-hidden="true">💵</span><span class="count">04</span></div><h3>WageMoneyCalc</h3><p>Salary, hourly wage, overtime, discounts, tax, tips, and profit calculators.</p><div class="mini-links"><span>Salary</span><span>Discount</span><span>Tip</span></div></a>
+<a class="category-card" href="/healthlifecalc/" style="--accent:#059669" data-title="healthlifecalc health & lifestyle bmi calories macros" data-category="Health & Lifestyle"><div class="cat-top"><span class="icon" aria-hidden="true">❤️</span><span class="count">05</span></div><h3>HealthLifeCalc</h3><p>BMI, BMR, calories, water intake, body fat, macros, pregnancy, and ovulation calculators.</p><div class="mini-links"><span>BMI</span><span>Calories</span><span>Macros</span></div></a>
+<a class="category-card" href="/texttools/" style="--accent:#0f766e" data-title="texttools text tools word count case diff" data-category="Text Tools"><div class="cat-top"><span class="icon" aria-hidden="true">Aa</span><span class="count">06</span></div><h3>TextTools</h3><p>Word counting, character counting, case conversion, duplicate line cleanup, and writing utilities.</p><div class="mini-links"><span>Word count</span><span>Case</span><span>Diff</span></div></a>
+<a class="category-card" href="/devtoolbox/" style="--accent:#2563eb" data-title="devtoolbox developer tools json base64 url" data-category="Developer Tools"><div class="cat-top"><span class="icon" aria-hidden="true">{}</span><span class="count">07</span></div><h3>DevToolBox</h3><p>JSON formatting, Base64, URL encoding, UUIDs, and handy browser-only developer utilities.</p><div class="mini-links"><span>JSON</span><span>Base64</span><span>URL</span></div></a>
+<a class="category-card" href="/imagetoolbox/" style="--accent:#db2777" data-title="imagetoolbox image tools compress resize crop" data-category="Image Tools"><div class="cat-top"><span class="icon" aria-hidden="true">🖼️</span><span class="count">08</span></div><h3>ImageToolBox</h3><p>Compress, resize, crop, and convert JPG, PNG, and WebP images in your browser.</p><div class="mini-links"><span>Compress</span><span>Resize</span><span>Crop</span></div></a>
+<a class="category-card" href="/pdftoolbox/" style="--accent:#dc2626" data-title="pdftoolbox pdf tools merge split compress" data-category="PDF Tools"><div class="cat-top"><span class="icon" aria-hidden="true">PDF</span><span class="count">09</span></div><h3>PDFToolBox</h3><p>Merge, split, compress, convert images to PDF, and work with documents locally.</p><div class="mini-links"><span>Merge</span><span>Split</span><span>Compress</span></div></a>
+<a class="category-card" href="/seotoolbox/" style="--accent:#7c3aed" data-title="seotoolbox seo tools meta sitemap robots" data-category="SEO Tools"><div class="cat-top"><span class="icon" aria-hidden="true">SEO</span><span class="count">10</span></div><h3>SEOToolBox</h3><p>Meta descriptions, robots.txt files, XML sitemaps, Open Graph tags, and keyword helpers.</p><div class="mini-links"><span>Meta</span><span>Sitemap</span><span>Robots</span></div></a>
+<a class="tool-link" href="/percentage-change-calculator/" data-title="percentage change calculator calculate percentage increase, decrease, and percent difference."><span class="badge">1</span><span><b>Percentage Change Calculator</b><p>Calculate percentage increase, decrease, and percent difference.</p></span></a>
+<a class="tool-link" href="/age-calculator-by-date/" data-title="age calculator by date of birth find exact age in years, months, days, and next birthday."><span class="badge">2</span><span><b>Age Calculator by Date of Birth</b><p>Find exact age in years, months, days, and next birthday.</p></span></a>
+<a class="tool-link" href="/discount-calculator-online/" data-title="discount calculator online calculate sale price, discount amount, and savings fast."><span class="badge">3</span><span><b>Discount Calculator Online</b><p>Calculate sale price, discount amount, and savings fast.</p></span></a>
+<a class="tool-link" href="/tip-calculator-online/" data-title="tip calculator online split restaurant bills and tips by party size."><span class="badge">4</span><span><b>Tip Calculator Online</b><p>Split restaurant bills and tips by party size.</p></span></a>
+<a class="tool-link" href="/text-case-converter-online/" data-title="text case converter online convert uppercase, lowercase, title case, sentence case, and slugs."><span class="badge">5</span><span><b>Text Case Converter Online</b><p>Convert uppercase, lowercase, title case, sentence case, and slugs.</p></span></a>
+<a class="tool-link" href="/pdf-splitter-online/" data-title="pdf splitter online split pdf page ranges privately in your browser."><span class="badge">6</span><span><b>PDF Splitter Online</b><p>Split PDF page ranges privately in your browser.</p></span></a>
+<a class="tool-link" href="/image-cropper-online/" data-title="image cropper online crop jpg, png, and webp files with a simple browser ui."><span class="badge">7</span><span><b>Image Cropper Online</b><p>Crop JPG, PNG, and WebP files with a simple browser UI.</p></span></a>
+<a class="tool-link" href="/json-minifier-online/" data-title="json minifier online minify and validate json for developer workflows."><span class="badge">8</span><span><b>JSON Minifier Online</b><p>Minify and validate JSON for developer workflows.</p></span></a>
+<a class="tool-link" href="/word-character-counter/" data-title="word character counter count words, characters, sentences, and reading time."><span class="badge">9</span><span><b>Word Character Counter</b><p>Count words, characters, sentences, and reading time.</p></span></a></div><div class="empty" id="empty-results">No matching tool yet. Try a broader keyword like “image”, “PDF”, “calculator”, or “text”.</div>
       </aside>
     </section>
-    <section class="section">
-      <div class="section-head">
-        <h2 class="title">Tool entrances</h2>
-        <p>Clear internal links help visitors and search engines discover every independent tool site under freetoolsspace.com.</p>
-      </div>
-      <div class="grid">
-      <article class="tool-card" style="--accent:#1769e0">
-        <div class="card-index">01</div>
-        <p class="card-kicker">Date &amp; Time</p>
-        <h2><a href="/datecalctools/">DateCalcTools</a></h2>
-        <p>Age, date difference, business days, countdowns, weekdays, and time duration calculators.</p>
-        <ul><li>Age Calculator</li><li>Date Calculator</li><li>Business Days Calculator</li></ul>
-        <a class="open-link" href="/datecalctools/" aria-label="Open DateCalcTools">Open DateCalcTools →</a>
-      </article>
-      <article class="tool-card" style="--accent:#e56b1f">
-        <div class="card-index">02</div>
-        <p class="card-kicker">Unit Conversion</p>
-        <h2><a href="/unitconverthub/">UnitConvertHub</a></h2>
-        <p>Length, weight, temperature, volume, area, and distance converters with formulas.</p>
-        <ul><li>CM to Inches</li><li>KG to LBS</li><li>Celsius to Fahrenheit</li></ul>
-        <a class="open-link" href="/unitconverthub/" aria-label="Open UnitConvertHub">Open UnitConvertHub →</a>
-      </article>
-      <article class="tool-card" style="--accent:#6d28d9">
-        <div class="card-index">03</div>
-        <p class="card-kicker">Math</p>
-        <h2><a href="/quickmathtools/">QuickMathTools</a></h2>
-        <p>Percentage, fraction, average, ratio, random number, grade, and GPA calculators.</p>
-        <ul><li>Percentage Calculator</li><li>Fraction Calculator</li><li>GPA Calculator</li></ul>
-        <a class="open-link" href="/quickmathtools/" aria-label="Open QuickMathTools">Open QuickMathTools →</a>
-      </article>
-      <article class="tool-card" style="--accent:#047857">
-        <div class="card-index">04</div>
-        <p class="card-kicker">Money &amp; Wage</p>
-        <h2><a href="/wagemoneycalc/">WageMoneyCalc</a></h2>
-        <p>Salary, hourly wage, overtime, discounts, sales tax, tips, profit margin, and freelance rates.</p>
-        <ul><li>Hourly Wage Calculator</li><li>Salary Calculator</li><li>Tip Calculator</li></ul>
-        <a class="open-link" href="/wagemoneycalc/" aria-label="Open WageMoneyCalc">Open WageMoneyCalc →</a>
-      </article>
-      <article class="tool-card" style="--accent:#059669">
-        <div class="card-index">05</div>
-        <p class="card-kicker">Health &amp; Lifestyle</p>
-        <h2><a href="/healthlifecalc/">HealthLifeCalc</a></h2>
-        <p>BMI, BMR, calories, water intake, ideal weight, body fat, pregnancy, ovulation, macros, and steps.</p>
-        <ul><li>BMI Calculator</li><li>Calorie Calculator</li><li>Water Intake Calculator</li></ul>
-        <a class="open-link" href="/healthlifecalc/" aria-label="Open HealthLifeCalc">Open HealthLifeCalc →</a>
-      </article>
-      <article class="tool-card" style="--accent:#0f766e">
-        <div class="card-index">06</div>
-        <p class="card-kicker">Text Tools</p>
-        <h2><a href="/texttools/">TextTools</a></h2>
-        <p>Word counting, character counting, case conversion, and duplicate line cleanup utilities.</p>
-        <ul><li>Word Counter</li><li>Case Converter</li><li>Remove Duplicate Lines</li></ul>
-        <a class="open-link" href="/texttools/" aria-label="Open TextTools">Open TextTools →</a>
-      </article>
-      <article class="tool-card" style="--accent:#2563eb">
-        <div class="card-index">07</div>
-        <p class="card-kicker">Developer Tools</p>
-        <h2><a href="/devtoolbox/">DevToolBox</a></h2>
-        <p>JSON formatting, Base64 encoding and decoding, URL encoding and decoding, and UUID generation.</p>
-        <ul><li>JSON Formatter</li><li>Base64 Encoder Decoder</li><li>UUID Generator</li></ul>
-        <a class="open-link" href="/devtoolbox/" aria-label="Open DevToolBox">Open DevToolBox →</a>
-      </article>
-      <article class="tool-card" style="--accent:#db2777">
-        <div class="card-index">08</div>
-        <p class="card-kicker">Image Tools</p>
-        <h2><a href="/imagetoolbox/">ImageToolBox</a></h2>
-        <p>Image compression, resizing, PNG to JPG conversion, and WebP conversion in your browser.</p>
-        <ul><li>Image Compressor</li><li>Image Resizer</li><li>WebP Converter</li></ul>
-        <a class="open-link" href="/imagetoolbox/" aria-label="Open ImageToolBox">Open ImageToolBox →</a>
-      </article>
-      <article class="tool-card" style="--accent:#7c3aed">
-        <div class="card-index">10</div>
-        <p class="card-kicker">SEO Tools</p>
-        <h2><a href="/seotoolbox/">SEOToolBox</a></h2>
-        <p>Meta descriptions, robots.txt files, XML sitemaps, Open Graph tags, and keyword density checks.</p>
-        <ul><li>Meta Description Generator</li><li>XML Sitemap Generator</li><li>Keyword Density Checker</li></ul>
-        <a class="open-link" href="/seotoolbox/" aria-label="Open SEOToolBox">Open SEOToolBox →</a>
-      </article>
-      </div>
-      <div class="crawl">
-        <h2>All FreeToolsSpace categories</h2>
-        <p>FreeToolsSpace is designed as a crawlable hub for fast, no-login calculator collections. Use the category pages below to reach date calculators, metric and imperial converters, percentage and fraction tools, salary and money calculators, and health planning calculators, and text utilities for writing cleanup.</p>
-        <ul><li><a href="/datecalctools/">DateCalcTools - date, age, weekday, countdown, and business day calculators</a></li><li><a href="/unitconverthub/">UnitConvertHub - length, weight, temperature, volume, distance, and area converters</a></li><li><a href="/quickmathtools/">QuickMathTools - percentage, fraction, average, ratio, grade, GPA, and random number tools</a></li><li><a href="/wagemoneycalc/">WageMoneyCalc - salary, hourly wage, overtime, discount, tax, tip, and profit calculators</a></li><li><a href="/healthlifecalc/">HealthLifeCalc - BMI, BMR, calories, water, body fat, macros, pregnancy, and ovulation calculators</a></li><li><a href="/texttools/">TextTools - word counter, character counter, case converter, and duplicate line remover</a></li><li><a href="/devtoolbox/">DevToolBox - JSON formatter, Base64 encoder decoder, URL encoder decoder, and UUID generator</a></li><li><a href="/imagetoolbox/">ImageToolBox - image compressor, image resizer, PNG to JPG converter, and WebP converter</a></li><li><a href="/pdftoolbox/">PDFToolBox - merge, split, compress, image to PDF, and JPG to PDF tools</a></li><li><a href="/seotoolbox/">SEOToolBox - meta description generator, robots.txt generator, XML sitemap generator, Open Graph generator, and keyword density checker</a></li></ul>
-      </div>
-      <section class="crawl" aria-labelledby="why-free-tools">
-        <h2 id="why-free-tools">Why use these free online calculators?</h2>
-        <p>Every calculator runs directly in the browser, so common inputs can be tested quickly without creating an account. The tools focus on clear formulas, practical examples, and simple outputs that are easy to copy into school work, planning notes, invoices, shopping comparisons, fitness logs, or travel estimates.</p>
-        <p>The site keeps each calculator collection in a dedicated folder with canonical URLs and a complete XML sitemap, helping visitors and search engines find the right tool from the main hub or from each category index, including the DevToolBox developer utilities, ImageToolBox image utilities, PDFToolBox document utilities, and SEOToolBox SEO utilities.</p>
-      </section>
-    </section>
+    <section class="section" id="categories" aria-labelledby="category-title"><div class="section-head"><h2 class="title" id="category-title">Browse by category</h2><p>Designed for a large tool website: compact cards, clear labels, and crawlable links to every major collection.</p></div><div class="category-grid"><a class="category-card" href="/datecalctools/" style="--accent:#1769e0" data-title="datecalctools date & time age date diff business days" data-category="Date & Time"><div class="cat-top"><span class="icon" aria-hidden="true">📅</span><span class="count">01</span></div><h3>DateCalcTools</h3><p>Age, date difference, weekday, countdown, business day, and duration calculators.</p><div class="mini-links"><span>Age</span><span>Date diff</span><span>Business days</span></div></a>
+<a class="category-card" href="/unitconverthub/" style="--accent:#e56b1f" data-title="unitconverthub unit conversion cm to inches kg to lbs temp" data-category="Unit Conversion"><div class="cat-top"><span class="icon" aria-hidden="true">📏</span><span class="count">02</span></div><h3>UnitConvertHub</h3><p>Length, weight, temperature, volume, area, and distance converters with formulas.</p><div class="mini-links"><span>CM to inches</span><span>KG to LBS</span><span>Temp</span></div></a>
+<a class="category-card" href="/quickmathtools/" style="--accent:#6d28d9" data-title="quickmathtools math percent fraction gpa" data-category="Math"><div class="cat-top"><span class="icon" aria-hidden="true">％</span><span class="count">03</span></div><h3>QuickMathTools</h3><p>Percentage, fraction, average, ratio, random number, grade, and GPA calculators.</p><div class="mini-links"><span>Percent</span><span>Fraction</span><span>GPA</span></div></a>
+<a class="category-card" href="/wagemoneycalc/" style="--accent:#047857" data-title="wagemoneycalc money & wage salary discount tip" data-category="Money & Wage"><div class="cat-top"><span class="icon" aria-hidden="true">💵</span><span class="count">04</span></div><h3>WageMoneyCalc</h3><p>Salary, hourly wage, overtime, discounts, tax, tips, and profit calculators.</p><div class="mini-links"><span>Salary</span><span>Discount</span><span>Tip</span></div></a>
+<a class="category-card" href="/healthlifecalc/" style="--accent:#059669" data-title="healthlifecalc health & lifestyle bmi calories macros" data-category="Health & Lifestyle"><div class="cat-top"><span class="icon" aria-hidden="true">❤️</span><span class="count">05</span></div><h3>HealthLifeCalc</h3><p>BMI, BMR, calories, water intake, body fat, macros, pregnancy, and ovulation calculators.</p><div class="mini-links"><span>BMI</span><span>Calories</span><span>Macros</span></div></a>
+<a class="category-card" href="/texttools/" style="--accent:#0f766e" data-title="texttools text tools word count case diff" data-category="Text Tools"><div class="cat-top"><span class="icon" aria-hidden="true">Aa</span><span class="count">06</span></div><h3>TextTools</h3><p>Word counting, character counting, case conversion, duplicate line cleanup, and writing utilities.</p><div class="mini-links"><span>Word count</span><span>Case</span><span>Diff</span></div></a>
+<a class="category-card" href="/devtoolbox/" style="--accent:#2563eb" data-title="devtoolbox developer tools json base64 url" data-category="Developer Tools"><div class="cat-top"><span class="icon" aria-hidden="true">{}</span><span class="count">07</span></div><h3>DevToolBox</h3><p>JSON formatting, Base64, URL encoding, UUIDs, and handy browser-only developer utilities.</p><div class="mini-links"><span>JSON</span><span>Base64</span><span>URL</span></div></a>
+<a class="category-card" href="/imagetoolbox/" style="--accent:#db2777" data-title="imagetoolbox image tools compress resize crop" data-category="Image Tools"><div class="cat-top"><span class="icon" aria-hidden="true">🖼️</span><span class="count">08</span></div><h3>ImageToolBox</h3><p>Compress, resize, crop, and convert JPG, PNG, and WebP images in your browser.</p><div class="mini-links"><span>Compress</span><span>Resize</span><span>Crop</span></div></a>
+<a class="category-card" href="/pdftoolbox/" style="--accent:#dc2626" data-title="pdftoolbox pdf tools merge split compress" data-category="PDF Tools"><div class="cat-top"><span class="icon" aria-hidden="true">PDF</span><span class="count">09</span></div><h3>PDFToolBox</h3><p>Merge, split, compress, convert images to PDF, and work with documents locally.</p><div class="mini-links"><span>Merge</span><span>Split</span><span>Compress</span></div></a>
+<a class="category-card" href="/seotoolbox/" style="--accent:#7c3aed" data-title="seotoolbox seo tools meta sitemap robots" data-category="SEO Tools"><div class="cat-top"><span class="icon" aria-hidden="true">SEO</span><span class="count">10</span></div><h3>SEOToolBox</h3><p>Meta descriptions, robots.txt files, XML sitemaps, Open Graph tags, and keyword helpers.</p><div class="mini-links"><span>Meta</span><span>Sitemap</span><span>Robots</span></div></a></div></section>
+    <section class="section" id="popular-tools" aria-labelledby="popular-title"><div class="section-head"><h2 class="title" id="popular-title">Popular and new tools</h2><p>High-demand entry points are surfaced near the top while still preserving category navigation and SEO-friendly text.</p></div><div class="featured-grid"><a class="tool-link" href="/percentage-change-calculator/" data-title="percentage change calculator calculate percentage increase, decrease, and percent difference."><span class="badge">1</span><span><b>Percentage Change Calculator</b><p>Calculate percentage increase, decrease, and percent difference.</p></span></a>
+<a class="tool-link" href="/age-calculator-by-date/" data-title="age calculator by date of birth find exact age in years, months, days, and next birthday."><span class="badge">2</span><span><b>Age Calculator by Date of Birth</b><p>Find exact age in years, months, days, and next birthday.</p></span></a>
+<a class="tool-link" href="/discount-calculator-online/" data-title="discount calculator online calculate sale price, discount amount, and savings fast."><span class="badge">3</span><span><b>Discount Calculator Online</b><p>Calculate sale price, discount amount, and savings fast.</p></span></a>
+<a class="tool-link" href="/tip-calculator-online/" data-title="tip calculator online split restaurant bills and tips by party size."><span class="badge">4</span><span><b>Tip Calculator Online</b><p>Split restaurant bills and tips by party size.</p></span></a>
+<a class="tool-link" href="/text-case-converter-online/" data-title="text case converter online convert uppercase, lowercase, title case, sentence case, and slugs."><span class="badge">5</span><span><b>Text Case Converter Online</b><p>Convert uppercase, lowercase, title case, sentence case, and slugs.</p></span></a>
+<a class="tool-link" href="/pdf-splitter-online/" data-title="pdf splitter online split pdf page ranges privately in your browser."><span class="badge">6</span><span><b>PDF Splitter Online</b><p>Split PDF page ranges privately in your browser.</p></span></a>
+<a class="tool-link" href="/image-cropper-online/" data-title="image cropper online crop jpg, png, and webp files with a simple browser ui."><span class="badge">7</span><span><b>Image Cropper Online</b><p>Crop JPG, PNG, and WebP files with a simple browser UI.</p></span></a>
+<a class="tool-link" href="/json-minifier-online/" data-title="json minifier online minify and validate json for developer workflows."><span class="badge">8</span><span><b>JSON Minifier Online</b><p>Minify and validate JSON for developer workflows.</p></span></a>
+<a class="tool-link" href="/word-character-counter/" data-title="word character counter count words, characters, sentences, and reading time."><span class="badge">9</span><span><b>Word Character Counter</b><p>Count words, characters, sentences, and reading time.</p></span></a></div></section>
+    <section class="section" aria-labelledby="seo-crawl-title"><div class="hub-panel"><article class="info-card"><h2 class="title" id="seo-crawl-title">All tools stay crawlable</h2><p>The homepage uses plain semantic links, one clear H1, descriptive category copy, and internal links for new and existing tools. This keeps the design friendly for users while supporting Google discovery.</p><ul class="crawl-links"><li><a href="/datecalctools/">DateCalcTools - Age, date difference, weekday, countdown, business day, and duration calculators.</a></li><li><a href="/unitconverthub/">UnitConvertHub - Length, weight, temperature, volume, area, and distance converters with formulas.</a></li><li><a href="/quickmathtools/">QuickMathTools - Percentage, fraction, average, ratio, random number, grade, and GPA calculators.</a></li><li><a href="/wagemoneycalc/">WageMoneyCalc - Salary, hourly wage, overtime, discounts, tax, tips, and profit calculators.</a></li><li><a href="/healthlifecalc/">HealthLifeCalc - BMI, BMR, calories, water intake, body fat, macros, pregnancy, and ovulation calculators.</a></li><li><a href="/texttools/">TextTools - Word counting, character counting, case conversion, duplicate line cleanup, and writing utilities.</a></li><li><a href="/devtoolbox/">DevToolBox - JSON formatting, Base64, URL encoding, UUIDs, and handy browser-only developer utilities.</a></li><li><a href="/imagetoolbox/">ImageToolBox - Compress, resize, crop, and convert JPG, PNG, and WebP images in your browser.</a></li><li><a href="/pdftoolbox/">PDFToolBox - Merge, split, compress, convert images to PDF, and work with documents locally.</a></li><li><a href="/seotoolbox/">SEOToolBox - Meta descriptions, robots.txt files, XML sitemaps, Open Graph tags, and keyword helpers.</a></li><li><a href="/image-optimization-tools/">Image Optimization Tools - Compress, resize, and convert web images.</a></li><li><a href="/compress-image-to-100kb/">Compress Image to 100KB - Target upload size limits in your browser.</a></li><li><a href="/png-to-webp-converter/">PNG to WebP Converter - Create smaller WebP files from PNG images.</a></li><li><a href="/text-diff-checker/">Text Diff Checker - Compare two text blocks line by line.</a></li><li><a href="/csv-duplicate-row-remover/">CSV Duplicate Row Remover - Remove duplicate rows from CSV and pasted lists.</a></li></ul></article><aside class="ad-card" aria-labelledby="adsense-title"><h3 id="adsense-title">AdSense-compatible layout</h3><p>The redesign avoids intrusive popups, hidden text, or layout tricks. Content appears before any ad slot, with stable spacing where display ads can be added later.</p><div class="ad-placeholder">Reserved responsive ad area<br><small>Safe spacing for future Google AdSense placement</small></div></aside></div></section>
+    <section class="section" aria-labelledby="why-title"><article class="info-card"><h2 class="title" id="why-title">Why use FreeToolsSpace?</h2><p>Every tool is built for a focused task: calculate, convert, format, compress, count, or generate. Tools run in the browser when possible, so common inputs can be tested quickly without creating an account. Category pages and related-tool links make it easy to continue from a calculator to a converter, from a PDF task to an image task, or from a developer utility to an SEO helper.</p><p>The site structure keeps each tool collection in a dedicated folder with canonical URLs and sitemap entries. That makes the experience predictable for visitors and easier for search engines to understand as the directory grows.</p></article></section>
 
-  <section class="section" aria-labelledby="new-tools-2026-06-15">
-    <div class="section-head">
-      <h2 class="title" id="new-tools-2026-06-15">New browser tools</h2>
-      <p>Fresh frontend-only utilities for image optimization and text cleanup. These pages are crawlable, no-login, and linked into related tool collections.</p>
-    </div>
-    <div class="crawl">
-      <ul>
-        <li><a href="/image-optimization-tools/">Image Optimization Tools - compress, resize, and convert web images</a></li>
-        <li><a href="/compress-image-to-100kb/">Compress Image to 100KB - target upload size limits in your browser</a></li>
-        <li><a href="/png-to-webp-converter/">PNG to WebP Converter - create smaller WebP images from PNG files</a></li>
-        <li><a href="/text-diff-checker/">Text Diff Checker - compare two text blocks line by line</a></li>
-        <li><a href="/csv-duplicate-row-remover/">CSV Duplicate Row Remover - remove duplicate rows from CSV or pasted lists</a></li>
-      </ul>
-    </div>
-  </section>
-  <section class="container"><h2>New PDF tools</h2><p><a href="/pdftoolbox/">PDFToolBox</a> includes merge, split, image to PDF, JPG to PDF, and PDF compressor tools.</p></section>
-<section class="section" id="new-browser-tools-2026-06-16">
-  <h2>New Free Browser Tools</h2>
-  <p>Fresh frontend-only utilities for PDFs, images, developers, SEO, and writing workflows.</p>
-  <div class="tool-grid">
-    <a class="tool-card" href="/pdf-splitter-online/"><h3>PDF Splitter Online</h3><p>Split PDF page ranges in your browser.</p></a>
-    <a class="tool-card" href="/image-cropper-online/"><h3>Image Cropper Online</h3><p>Crop JPG, PNG, and WebP images privately.</p></a>
-    <a class="tool-card" href="/json-minifier-online/"><h3>JSON Minifier Online</h3><p>Compress and validate JSON instantly.</p></a>
-    <a class="tool-card" href="/url-slug-generator/"><h3>URL Slug Generator</h3><p>Create clean SEO friendly slugs.</p></a>
-    <a class="tool-card" href="/word-character-counter/"><h3>Word Character Counter</h3><p>Count words, characters, and reading time.</p></a>
-  </div>
-</section>
+  <script>
+    (function(){
+      const input=document.getElementById('tool-search');
+      const list=document.getElementById('search-results');
+      const empty=document.getElementById('empty-results');
+      if(!input||!list||!empty)return;
+      const items=Array.from(list.querySelectorAll('a'));
+      function filter(){const q=input.value.trim().toLowerCase();let shown=0;items.forEach(a=>{const hay=(a.dataset.title||a.textContent).toLowerCase();const ok=!q||hay.includes(q);a.style.display=ok?'':'none';if(ok)shown++;});empty.style.display=shown?'none':'block';}
+      input.addEventListener('input',filter);filter();
+    })();
+  </script>
+
 </main>
   <footer>
     <div class="footer-inner">
-      <strong>FreeToolsSpace</strong>
-      <span>Static browser tools for everyday calculations.</span>
-      <a href="/sitemap.xml">Sitemap</a>
+      <div><strong>FreeToolsSpace</strong><span>Free browser tools for everyday work.</span></div>
+      <nav aria-label="Footer navigation"><a href="/sitemap.xml">Sitemap</a><a href="/robots.txt">Robots</a><a href="/ads.txt">Ads.txt</a></nav>
     </div>
   </footer>
 </body>
