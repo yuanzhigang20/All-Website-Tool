@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 132" role="img" aria-labelledby="title desc">
+  <title id="title">FreeToolsSpace logo</title>
+  <desc id="desc">A friendly green and gold toolbox grid mark beside the FreeToolsSpace wordmark.</desc>
+  <defs>
+    <linearGradient id="markBg" x1="14" y1="12" x2="116" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff2b8"/>
+      <stop offset="0.45" stop-color="#ffdf67"/>
+      <stop offset="1" stop-color="#15a170"/>
+    </linearGradient>
+    <linearGradient id="tileBg" x1="34" y1="32" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#f8f5ec" stop-opacity="0.96"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#17201b" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="108" height="108" rx="28" fill="url(#markBg)" stroke="#17201b" stroke-width="5"/>
+    <path d="M38 42h56M38 66h56M38 90h56M42 38v56M66 38v56M90 38v56" stroke="#17201b" stroke-width="4" stroke-linecap="round" opacity="0.18"/>
+    <rect x="36" y="36" width="26" height="26" rx="9" fill="url(#tileBg)" stroke="#17201b" stroke-width="3"/>
+    <path d="M44 50h11M50 44v12" stroke="#0f6b4d" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="70" y="36" width="26" height="26" rx="9" fill="url(#tileBg)" stroke="#17201b" stroke-width="3"/>
+    <path d="M78 47h10M78 53h10" stroke="#6d28d9" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="36" y="70" width="26" height="26" rx="9" fill="url(#tileBg)" stroke="#17201b" stroke-width="3"/>
+    <path d="M45 82h8l-4 7h8" fill="none" stroke="#1769e0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="70" y="70" width="26" height="26" rx="9" fill="url(#tileBg)" stroke="#17201b" stroke-width="3"/>
+    <path d="M82 78l2.2 5.4 5.8.5-4.4 3.8 1.3 5.7-4.9-3-5 3 1.4-5.7-4.4-3.8 5.8-.5L82 78z" fill="#d7a72f" stroke="#17201b" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <g fill="#17201b">
+    <text x="148" y="62" font-family="ui-serif, Georgia, Cambria, 'Times New Roman', serif" font-size="43" font-weight="900" letter-spacing="-2.2">FreeTools</text>
+    <text x="148" y="101" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="37" font-weight="900" letter-spacing="-1.9">Space</text>
+  </g>
+  <path d="M459 27l5 13 14 4-14 5-5 13-5-13-14-5 14-4 5-13z" fill="#ffdf67" stroke="#17201b" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="427" cy="96" r="6" fill="#15a170"/>
+</svg>
