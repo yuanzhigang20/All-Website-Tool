@@ -1,0 +1,24 @@
+# FreeToolsSpace
+
+FreeToolsSpace is a collection of free, browser-based calculators, converters, PDF tools, image tools, text tools, developer utilities, SEO utilities, date calculators, health calculators, wage calculators, and unit converters.
+
+Primary site: https://freetoolsspace.com/
+Sitemap index: https://freetoolsspace.com/sitemap-index.xml
+Robots: https://freetoolsspace.com/robots.txt
+
+## Main sections
+
+- DateCalcTools: https://freetoolsspace.com/datecalctools/
+- DevToolBox: https://freetoolsspace.com/devtoolbox/
+- HealthLifeCalc: https://freetoolsspace.com/healthlifecalc/
+- ImageToolBox: https://freetoolsspace.com/imagetoolbox/
+- PDFToolBox: https://freetoolsspace.com/pdftoolbox/
+- QuickMathTools: https://freetoolsspace.com/quickmathtools/
+- SEOToolBox: https://freetoolsspace.com/seotoolbox/
+- TextTools: https://freetoolsspace.com/texttools/
+- UnitConvertHub: https://freetoolsspace.com/unitconverthub/
+- WageMoneyCalc: https://freetoolsspace.com/wagemoneycalc/
+
+## Usage notes
+
+Most tools run in the browser and are intended for quick educational, planning, and everyday productivity use. Verify important results with official or professional sources.
